@@ -1,19 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-	float nba_height_check(float ft)
-{
-	float m = 0;
-	m = ft * 0.3281 ;
-	return m;
-}	
+	double nba_height_check(double ft, double inch);
 
-	float main(float argc[], char **argv[])
+
+	double main(double argc[], char **argv[])
 	
 {	
-	float height = 0;
-	printf("6ft c'est environ  %f m\n", nba_height_check(6));
+	printf("6ft2 c'est  %f cm\n", nba_height_check(6,2));
+
 	return 0;
 }
-		
+
+	double nba_height_check(double ft, double inch)
 	
+{
+	double cm = 0, cm1 = 0, cm2 = 0 ;
+	double ft, inch;
+	cm1 = 30.48 * ft;
+	cm2 = 2.54 * inch;
+	cm1 + cm2 == cm;
+	return cm;
+}	
